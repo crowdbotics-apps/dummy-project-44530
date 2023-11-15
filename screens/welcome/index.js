@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
+import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
 const WelcomeScreen = () => {
   return <SafeAreaView style={styles.container}>
@@ -11,7 +11,7 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
-        <Text style={styles.footer}>Made with ❤️ by Crowdbotics</Text>
+        <Button title="Made with ❤️ by Crowdbotics" />
       </ScrollView>
     </SafeAreaView>;
 };
