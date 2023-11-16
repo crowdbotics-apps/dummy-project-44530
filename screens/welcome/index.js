@@ -9,11 +9,17 @@ const WelcomeScreen = () => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
-          <Pressable><Image style={styles.logo} source={require("./logo.png")} /></Pressable>
+          <Pressable>
+            <Image style={styles.logo} source={require("./logo.png")} />
+          </Pressable>
           <Text style={styles.text}>
             Let's build something amazing together!
           </Text>
         </View>
+
+        <Pressable>
+          <Text style={styles.text}>Let's build</Text>
+        </Pressable>
         <Button title="Main Screen" onPress={() => {}} style={styles.tSrdkCYV} />
       </ScrollView>
     </SafeAreaView>;
