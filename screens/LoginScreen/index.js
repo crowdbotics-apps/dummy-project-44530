@@ -1,9 +1,9 @@
 import React from "react";
-import { StyleSheet, SafeAreaView, Text } from "react-native";
+import { StyleSheet, SafeAreaView, Button } from "react-native";
 
 const LoginScreen = () => {
   return <SafeAreaView style={styles.safeArea}>
-      <Text style={styles.textStyling}>Login Screen</Text>
+      <Button title="Login Screen" onPress={() => {}} />
     </SafeAreaView>;
 };
 
