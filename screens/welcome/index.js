@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Pressable } from "react-native";
+import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
 
 const WelcomeScreen = () => {
   const navigation = useNavigation();
@@ -13,11 +13,7 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
-        <Pressable onPress={() => {
-        navigation.navigate("LoginScreen");
-      }}>
-          <Text style={styles.XbfjYFRs}>Made with ❤️ by Crowdbotics</Text>
-        </Pressable>
+        <Button title="Main Screen" onPress={() => {}} />
       </ScrollView>
     </SafeAreaView>;
 };
