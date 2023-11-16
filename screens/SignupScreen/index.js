@@ -13,7 +13,7 @@ const SignupScreen = () => {
       <TextInput style={styles.input} onChangeText={setEmail} value={email} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
       <TextInput style={styles.input} onChangeText={setConfirmPassword} value={confirmPassword} placeholder="Confirm Password" secureTextEntry />
-      <Button title="Sign Up" onPress={() => {}} />
+      <Button title="Sign Up" onPress={() => {}} data={[1, 2, 3]} />
     </SafeAreaView>;
 };
 

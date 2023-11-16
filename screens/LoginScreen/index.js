@@ -1,7 +1,12 @@
 import React from "react";
 import { StyleSheet, SafeAreaView, Button } from "react-native";
 
-const LoginScreen = () => {
+const LoginScreen = ({
+  route
+}) => {
+  const {
+    id
+  } = route.params || {};
   return <SafeAreaView style={styles.safeArea}>
       <Button title="Login Screen" onPress={() => {}} />
     </SafeAreaView>;
