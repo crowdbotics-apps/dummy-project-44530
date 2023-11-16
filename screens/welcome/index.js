@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
@@ -8,12 +9,12 @@ const WelcomeScreen = () => {
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
         <View style={styles.group}>
-          <Image style={styles.logo} source={require("./logo.png")} />
+          <Pressable><Image style={styles.logo} source={require("./logo.png")} /></Pressable>
           <Text style={styles.text}>
             Let's build something amazing together!
           </Text>
         </View>
-        <Button title="Main Screen" onPress={() => {}} />
+        <Button title="Main Screen" onPress={() => {}} style={styles.tSrdkCYV} />
       </ScrollView>
     </SafeAreaView>;
 };
@@ -47,6 +48,10 @@ const styles = StyleSheet.create({
   },
   XbfjYFRs: {
     textAlign: "left"
+  },
+  tSrdkCYV: {
+    width: 187,
+    height: 33
   }
 });
 export default WelcomeScreen;

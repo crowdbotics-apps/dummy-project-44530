@@ -15,7 +15,7 @@ const LoginScreen = ({
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     justifyContent: "center",
     alignItems: "center"
   },
