@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Pressable } from "react-native";
 
 const WelcomeScreen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group} />
@@ -11,8 +13,10 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
-        <Pressable>
-          <Text>Made with ❤️ by Crowdbotics</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("LoginScreen");
+      }}>
+          <Text style={styles.XbfjYFRs}>Made with ❤️ by Crowdbotics</Text>
         </Pressable>
       </ScrollView>
     </SafeAreaView>;
@@ -45,12 +49,8 @@ const styles = StyleSheet.create({
     color: "#828AB0",
     fontWeight: 700
   },
-  footer: {
-    textAlign: "center",
-    fontSize: 18,
-    color: "#828AB0",
-    fontWeight: 700,
-    marginBottom: 20
+  XbfjYFRs: {
+    textAlign: "left"
   }
 });
 export default WelcomeScreen;
