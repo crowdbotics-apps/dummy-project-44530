@@ -1,47 +1,63 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, TextInput, Button, Image, Text } from 'react-native';
+import React from 'react';
+import { SafeAreaView, View, Text, Image, FlatList, StyleSheet } from 'react-native';
+const patientsData = [{
+  id: '1',
+  name: 'John Doe',
+  age: 30
+}, {
+  id: '2',
+  name: 'Jane Doe',
+  age: 28
+}, {
+  id: '3',
+  name: 'Bob Smith',
+  age: 35
+} // Add more patients here...
+];
 
-const SignupScreen = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  return <SafeAreaView style={styles.container}>
-      <Image style={styles.logo} source={{
-      uri: 'https://tinyurl.com/42evm3m3'
-    }} />
-      <Text style={styles.title}>Health App</Text>
-      <TextInput style={styles.input} onChangeText={setEmail} value={email} placeholder="Email" keyboardType="email-address" />
-      <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
-      <TextInput style={styles.input} onChangeText={setConfirmPassword} value={confirmPassword} placeholder="Confirm Password" secureTextEntry />
-      <Button title="Sign Up" onPress={() => {}} />
-    </SafeAreaView>;
-};
+const PatientItem = ({
+  item
+}) => <View style={styles.itemContainer}>
+    <Image style={styles.image} source={{
+    uri: 'https://tinyurl.com/42evm3m3'
+  }} />
+    <View style={styles.textContainer}>
+      <Text style={styles.name}>{item.name}</Text>
+      <Text style={styles.age}>{item.age} years old</Text>
+    </View>
+  </View>;
+
+const HomeScreen = () => <SafeAreaView style={styles.container}>
+    <FlatList data={patientsData} renderItem={PatientItem} keyExtractor={item => item.id} />
+  </SafeAreaView>;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#f5f5f5'
+    backgroundColor: '#F5F5F5'
   },
-  logo: {
-    width: 100,
-    height: 100,
-    marginBottom: 20
+  itemContainer: {
+    flexDirection: 'row',
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E0E0E0'
   },
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20
+  image: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    marginRight: 10
   },
-  input: {
-    width: '80%',
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 10,
-    paddingLeft: 10,
-    borderRadius: 5
+  textContainer: {
+    justifyContent: 'center'
+  },
+  name: {
+    fontSize: 18,
+    fontWeight: 'bold'
+  },
+  age: {
+    fontSize: 16,
+    color: '#757575'
   }
 });
-export default SignupScreen;
+export default HomeScreen;
