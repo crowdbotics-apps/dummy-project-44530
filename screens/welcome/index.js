@@ -1,6 +1,6 @@
 import { Pressable } from "react-native";
 import React from "react";
-import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Button } from "react-native";
+import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
 
 const WelcomeScreen = () => {
   return <SafeAreaView style={styles.container}>
@@ -14,9 +14,7 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
-        <Button title="Login Screen" onPress={() => {}} style={styles.tSrdkCYV} />
-
-        <Button title="Signup Screen" onPress={() => {}} style={styles.tSrdkCYV} />
+        
       </ScrollView>
     </SafeAreaView>;
 };
