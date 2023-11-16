@@ -14,11 +14,9 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
+        <Button title="Login Screen" onPress={() => {}} style={styles.tSrdkCYV} />
 
-        <Pressable testOnly_pressed={true}>
-          <Text style={styles.text}>Let's build</Text>
-        </Pressable>
-        <Button title="Main Screen" onPress={() => {}} style={styles.tSrdkCYV} />
+        <Button title="Signup Screen" onPress={() => {}} style={styles.tSrdkCYV} />
       </ScrollView>
     </SafeAreaView>;
 };
