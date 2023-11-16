@@ -1,11 +1,9 @@
-import { Pressable } from "react-native";
 import React from "react";
-import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet } from "react-native";
+import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Pressable } from "react-native";
 
 const WelcomeScreen = () => {
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
-        <View style={styles.group} />
         <View style={styles.group}>
           <Pressable>
             <Image style={styles.logo} source={require("./logo.png")} />
@@ -14,7 +12,14 @@ const WelcomeScreen = () => {
             Let's build something amazing together!
           </Text>
         </View>
-        
+
+        <Pressable>
+          <Text style={styles.text}>Login</Text>
+        </Pressable>
+
+        <Pressable>
+          <Text style={styles.text}>Signup</Text>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>;
 };
