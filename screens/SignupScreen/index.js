@@ -1,22 +1,17 @@
-import { Pressable } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView, StyleSheet, TextInput, Button, Image, Text } from "react-native";
 
-const SignupScreen = () => {
+const LoginScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   return <SafeAreaView style={styles.container}>
-      <Pressable onPress={() => {}}>
-        <Image style={styles.logo} source={{
-        uri: "https://tinyurl.com/42evm3m3"
-      }} />
-      </Pressable>
+      <Image style={styles.logo} source={{
+      uri: "https://tinyurl.com/42evm3m3"
+    }} />
       <Text style={styles.title}>Health App</Text>
       <TextInput style={styles.input} onChangeText={setEmail} value={email} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
-      <TextInput style={styles.input} onChangeText={setConfirmPassword} value={confirmPassword} placeholder="Confirm Password" secureTextEntry />
-      <Button title="Sign Up" onPress={() => {}} data={[1, 2, 3]} />
+      <Button title="Login" onPress={() => {}} />
     </SafeAreaView>;
 };
 
@@ -47,4 +42,4 @@ const styles = StyleSheet.create({
     borderRadius: 5
   }
 });
-export default SignupScreen;
+export default LoginScreen;
