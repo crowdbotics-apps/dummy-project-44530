@@ -16,9 +16,7 @@ const WelcomeScreen = () => {
         </View>
         <Button title="Login Screen" onPress={() => {}} style={styles.tSrdkCYV} />
 
-        <Button title="Signup Screen" onPress={() => {
-        navigation.navigate('loginScreen');
-      }} style={styles.tSrdkCYV} />
+        <Button title="Signup Screen" onPress={() => {}} style={styles.tSrdkCYV} />
       </ScrollView>
     </SafeAreaView>;
 };
