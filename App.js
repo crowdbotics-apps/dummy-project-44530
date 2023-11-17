@@ -27,7 +27,9 @@ const getNavigation = modules => {
           </OptionsContext.Provider>;
       };
 
-      return <Stack.Screen key={name} name={name} component={Component} />;
+      console.log(getOptions(pakage) , pakage)
+
+      return <Stack.Screen key={name} name={name} component={Component} options={getOptions(pakage)} />;
     });
     const {
       screenOptions

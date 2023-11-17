@@ -7,10 +7,15 @@ opts.map(opt => {
 });
 export function getOptions(pakage) {
   let target = options[pakage] || {};
+
+  // console.log(target , "Target")
   let source = modulesOptions[pakage] || {};
+
+  // console.log(source , "source")
   return Object.assign(target, source);
 }
 export function getGlobalOptions() {
+  // console.log(globalOptions , "GlobalOption")
   return globalOptions;
 }
 export const OptionsContext = React.createContext(options);

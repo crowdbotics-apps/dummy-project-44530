@@ -5,8 +5,8 @@ const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return <SafeAreaView style={styles.container}>
-      <Image style={styles.logo} source={{
-      uri: 'https://tinyurl.com/42evm3m3'
+      <Image style={styles.logo} resizeMode='center' source={{
+      uri: 'https://delgnnnzzjz4p.cloudfront.net/5bdade26e5f3b8c0f8db2ef89f134fd8db006ce7/img/cb-footer.png'
     }} />
       <TextInput style={styles.input} onChangeText={setEmail} value={email} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff"
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
     marginBottom: 50
   },
   input: {
