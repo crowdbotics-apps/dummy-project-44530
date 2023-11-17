@@ -6,12 +6,10 @@ opts.map(opt => {
   options[opt.package] = opt.value;
 });
 export function getOptions(pakage) {
-  let target = options[pakage] || {};
+  let target = options[pakage] || {}; // console.log(target , "Target")
 
-  // console.log(target , "Target")
-  let source = modulesOptions[pakage] || {};
+  let source = modulesOptions[pakage] || {}; // console.log(source , "source")
 
-  // console.log(source , "source")
   return Object.assign(target, source);
 }
 export function getGlobalOptions() {

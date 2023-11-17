@@ -3,9 +3,7 @@ import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Pressable } from "react-native";
 
 const WelcomeScreen = () => {
-
-  const navigation = useNavigation()
-
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollView}>
         <View style={styles.group}>
@@ -17,15 +15,15 @@ const WelcomeScreen = () => {
           </Text>
         </View>
 
-        <Pressable onPress={()=>{
-          navigation.navigate('LoginScreen')
-        }}>
+        <Pressable onPress={() => {
+        navigation.navigate('LoginScreen');
+      }}>
           <Text style={styles.text}>Login</Text>
         </Pressable>
 
-        <Pressable onPress={()=>{
-          navigation.navigate('SignUpScreen')
-        }}>
+        <Pressable onPress={() => {
+        navigation.navigate('SignUpScreen');
+      }}>
           <Text style={styles.text}>Signup</Text>
         </Pressable>
       </ScrollView>

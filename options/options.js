@@ -4,7 +4,7 @@ export const globalOptions = {
   "api": "https://dummy-project-44530.botics.co/api/v1",
   "screenOptions": {
     "headerShown": false,
-    "title": 'WelcomeScreen',
+    "title": 'WelcomeScreen'
   },
   "initialRoute": "welcome"
 };
@@ -12,8 +12,8 @@ export const modulesOptions = {
   "@modules/app-menu": {
     copy: "Routes available!"
   },
-  "LoginScreen":{
-      "headerShown": false,
-      "title": 'LoginScreen',
+  "LoginScreen": {
+    "headerShown": false,
+    "title": 'LoginScreen'
   }
 };
