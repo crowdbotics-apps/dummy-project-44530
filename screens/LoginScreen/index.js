@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, TextInput, Button, View, Image } from 'react-native';
 
-const SignupScreen = () => {
+const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   return <SafeAreaView style={styles.container}>
@@ -11,7 +11,7 @@ const SignupScreen = () => {
       <TextInput style={styles.input} onChangeText={setEmail} value={email} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} onChangeText={setPassword} value={password} placeholder="Password" secureTextEntry />
       <View style={styles.buttonContainer}>
-        <Button title="Sign Up" onPress={() => console.log('Sign Up Pressed')} />
+        <Button title="Login" onPress={() => {}} />
       </View>
     </SafeAreaView>;
 };
@@ -19,9 +19,9 @@ const SignupScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: "#ffffff"
   },
   logo: {
     width: 150,
@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
     width: '80%',
     borderColor: 'gray',
     borderWidth: 1,
-    marginTop: 20,
-    paddingHorizontal: 10
+    marginBottom: 20,
+    paddingLeft: 10,
+    borderRadius: 5
   },
   buttonContainer: {
-    marginTop: 30,
-    width: '80%'
+    width: '80%',
+    marginTop: 20
   }
 });
-export default SignupScreen;
+export default LoginScreen;
