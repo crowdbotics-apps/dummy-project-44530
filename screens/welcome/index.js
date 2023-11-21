@@ -22,7 +22,7 @@ const WelcomeScreen = () => {
         </Pressable>
 
         <Pressable onPress={() => {
-        navigation.navigate('SignUpScreen');
+        // navigation.navigate('Camera');
       }}>
           <Text style={styles.text}>Signup</Text>
         </Pressable>

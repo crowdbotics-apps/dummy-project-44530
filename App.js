@@ -9,6 +9,8 @@ import { screens } from "@screens";
 import { modules, reducers, hooks } from "@modules";
 import { connectors } from "@store";
 import { GlobalOptionsContext, OptionsContext, getOptions, getGlobalOptions } from "@options";
+import AboutTheAppScreen from "./screens/about-the-app";
+import camera from "./modules/camera";
 const Stack = createStackNavigator();
 
 const getNavigation = modules => {
@@ -27,7 +29,6 @@ const getNavigation = modules => {
           </OptionsContext.Provider>;
       };
 
-      console.log(getOptions(pakage), pakage);
       return <Stack.Screen key={name} name={name} component={Component} options={getOptions(pakage)} />;
     });
     const {
@@ -36,6 +37,8 @@ const getNavigation = modules => {
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
+          {/* <Stack.Screen key={'AboutTheApp'} name={'AboutTheApp'} component={AboutTheAppScreen} />
+          <Stack.Screen key={'Camera'} name={'Camera'} component={camera?.navigator} /> */}
         </Stack.Navigator>
       </NavigationContainer>;
   };
