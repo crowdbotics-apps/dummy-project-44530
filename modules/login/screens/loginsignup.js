@@ -29,7 +29,6 @@ export const SignupTab = () => {
     email: "",
     password: ""
   });
-
   const {
     token,
     user,
@@ -85,7 +84,7 @@ export const SignInTab = ({
     token,
     user,
     api
-  }  = useSelector(state => state.Login);
+  } = useSelector(state => state.Login);
   const dispatch = useDispatch();
 
   const onSigninPress = async () => {

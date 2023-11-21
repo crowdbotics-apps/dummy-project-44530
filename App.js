@@ -9,7 +9,6 @@ import { screens } from "@screens";
 import { modules, reducers, hooks } from "@modules";
 import { connectors } from "@store";
 import { GlobalOptionsContext, OptionsContext, getOptions, getGlobalOptions } from "@options";
-import login from "./modules/login";
 const Stack = createStackNavigator();
 
 const getNavigation = modules => {
@@ -33,13 +32,16 @@ const getNavigation = modules => {
     const {
       screenOptions
     } = globalOptions;
-
-    console.log(routes)
+    console.log(routes);
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
-          {/* <Stack.Screen key={'LoginSignup'} name={'LoginSignup'} component={login?.navigator} /> */}
-          {/* <Stack.Screen key={'Camera'} name={'Camera'} component={camera?.navigator} />  */}
+          {
+          /* <Stack.Screen key={'LoginSignup'} name={'LoginSignup'} component={login?.navigator} /> */
+        }
+          {
+          /* <Stack.Screen key={'Camera'} name={'Camera'} component={camera?.navigator} />  */
+        }
         
         </Stack.Navigator>
       </NavigationContainer>;
@@ -57,12 +59,11 @@ const getStore = globalState => {
     ...reducers,
     ...connectors
   });
-
   console.log({
     app: appReducer,
     ...reducers,
     ...connectors
-  })
+  });
   return configureStore({
     reducer: reducer,
     middleware: getDefaultMiddleware => getDefaultMiddleware()

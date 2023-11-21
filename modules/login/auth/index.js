@@ -129,7 +129,6 @@ export const slice = createSlice({
     }
   }
 });
-
 export default {
   loginRequest,
   signupRequest,
