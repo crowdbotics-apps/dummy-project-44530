@@ -1,6 +1,8 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { View, Image, Text, ScrollView, SafeAreaView, StyleSheet, Pressable } from "react-native";
+import login from "../../modules/login";
+
 
 const WelcomeScreen = () => {
   const navigation = useNavigation();
@@ -21,7 +23,7 @@ const WelcomeScreen = () => {
           <Text style={styles.text}>Login</Text>
         </Pressable>
 
-        <Pressable onPress={() => {// navigation.navigate('Camera');
+        <Pressable onPress={() => { navigation.navigate('login');
       }}>
           <Text style={styles.text}>Signup</Text>
         </Pressable>

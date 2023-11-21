@@ -5,7 +5,7 @@ import { NavigationHelpersContext, useNavigationBuilder, TabRouter, TabActions, 
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { createStackNavigator } from "@react-navigation/stack";
 import { BACKGROUND_URL, LOGO_URL } from "./screens/constants.js";
-import { slice } from "./auth";
+import { slice } from "./auth/index.js";
 import { styles } from "./screens/styles";
 import { SignInTab, SignupTab } from "./screens/loginsignup";
 import PasswordReset from "./screens/reset";

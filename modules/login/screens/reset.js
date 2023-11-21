@@ -14,7 +14,7 @@ const PasswordRecover = ({
   const [email, setEmail] = useState("");
   const {
     api
-  } = useSelector(state => state.login);
+  } = useSelector(state => state.Login);
   const dispatch = useDispatch();
 
   const handlePasswordReset = () => {

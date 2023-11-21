@@ -129,3 +129,12 @@ export const slice = createSlice({
     }
   }
 });
+
+export default {
+  loginRequest,
+  signupRequest,
+  logoutRequest,
+  getAuthUser,
+  resetPassword,
+  slice: slice
+};
