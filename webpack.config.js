@@ -52,6 +52,7 @@ const DevEnvPlugin = new webpack.DefinePlugin({
   "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development")
 })
 
+
 const JestWorkerPlugin = new webpack.EnvironmentPlugin({ JEST_WORKER_ID: null })
 
 // This is needed for webpack to compile JavaScript.
@@ -69,7 +70,11 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, "screens"),
     path.resolve(appDirectory, "options"),
     path.resolve(appDirectory, "store"),
-    path.resolve(appDirectory, "node_modules/react-native-reanimated")
+    path.resolve(appDirectory, "node_modules/react-native-reanimated"),
+    path.resolve(appDirectory, 'node_modules/react-native-keyboard-aware-scroll-view'),
+    path.resolve(appDirectory, 'node_modules/react-native-switch-toggle'),
+    path.resolve(appDirectory, 'node_modules/react-native-actionsheet'),
+    path.resolve(appDirectory, 'node_modules/@rnmapbox/maps')
   ],
   use: {
     loader: "babel-loader",
@@ -116,7 +121,6 @@ module.exports = {
     "@babel/polyfill",
     path.resolve(appDirectory, "index.js")
   ],
-
   // configures where the build ends up
   output: {
     filename: "bundle.[hash].js",

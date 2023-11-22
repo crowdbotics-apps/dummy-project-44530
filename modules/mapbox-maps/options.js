@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
 
-const MAPBOX_TOKEN = "Mapbox Access token";
-const mapStyleURL = "Map Style URL";
+const MAPBOX_TOKEN = "sk.eyJ1IjoiaHVzbmFpbi1uYXNpci1jcm93ZGJvdGljcyIsImEiOiJjbHA4aWR5bXIwMW5hMmpvZjg0c2J5cHE4In0.5n0EnUkF4ywCwqI4HXzGpw";
+const mapStyleURL = "mapbox://styles/husnain-nasir-crowdbotics/clp8igf4n000701pge2tm50wd";
 const ORIGIN = [66.99388832116034, 30.15489668965283];
 const MARKED_CENTERED = [67.01328210715224, 30.19992930290644];
-const GOOGLE_API_KEY = "Google API Key";
+const GOOGLE_API_KEY = "AIzaSyDyllQYzDTIb-te2Xa7-opHxJZ_VZMOp6M";
 const POLYGON = {
   type: "Feature",
   geometry: {
