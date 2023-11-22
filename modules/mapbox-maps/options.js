@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-
 const MAPBOX_TOKEN = "Mapbox Access token";
 const mapStyleURL = "Map Style URL";
 const ORIGIN = [66.99388832116034, 30.15489668965283];
@@ -9,17 +8,9 @@ const POLYGON = {
   type: "Feature",
   geometry: {
     type: "Polygon",
-    coordinates: [
-      [
-        [67.0025388109022, 30.145163342632628],
-        [66.99652020824672, 30.134028219157344],
-        [67.01640602948962, 30.141351645223594],
-        [67.0025388109022, 30.145163342632628]
-      ]
-    ]
+    coordinates: [[[67.0025388109022, 30.145163342632628], [66.99652020824672, 30.134028219157344], [67.01640602948962, 30.141351645223594], [67.0025388109022, 30.145163342632628]]]
   }
 };
-
 const MAP_SETTINGS = {
   logoEnabled: false,
   zoomLevel: 8,
@@ -27,22 +18,18 @@ const MAP_SETTINGS = {
   localizeLabels: true,
   zoomEnabled: true
 };
-
 const styles = StyleSheet.create({
   view: {
     height: "100%"
   },
-  container: {
-    ...StyleSheet.absoluteFillObject,
+  container: { ...StyleSheet.absoluteFillObject,
     height: 400,
     width: 400,
     justifyContent: "flex-end",
     alignItems: "center"
   },
-  map: {
-    ...StyleSheet.absoluteFillObject
+  map: { ...StyleSheet.absoluteFillObject
   },
-
   markerImg: {
     width: 30,
     height: 40,
@@ -101,14 +88,36 @@ const styles = StyleSheet.create({
     top: 20,
     left: 18
   },
-  topContainer: { flexDirection: "row", alignItems: "center" },
-  profileContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: "white", width: 130 },
-  profileIco: { paddingHorizontal: 5 },
-  drive: { height: 50, width: 50, resizeMode: "contain" },
-  cycle: { height: 30, width: 30, resizeMode: "contain" },
-  walk: { height: 25, width: 25, resizeMode: "contain" }
+  topContainer: {
+    flexDirection: "row",
+    alignItems: "center"
+  },
+  profileContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: "white",
+    width: 130
+  },
+  profileIco: {
+    paddingHorizontal: 5
+  },
+  drive: {
+    height: 50,
+    width: 50,
+    resizeMode: "contain"
+  },
+  cycle: {
+    height: 30,
+    width: 30,
+    resizeMode: "contain"
+  },
+  walk: {
+    height: 25,
+    width: 25,
+    resizeMode: "contain"
+  }
 });
-
 export default {
   MAPBOX_TOKEN,
   mapStyleURL,
