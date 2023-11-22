@@ -119,3 +119,4 @@ export default {
   GOOGLE_API_KEY,
   MARKED_CENTERED
 };
+
