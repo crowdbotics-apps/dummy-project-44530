@@ -33,7 +33,6 @@ const getNavigation = modules => {
     const {
       screenOptions
     } = globalOptions;
-
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
@@ -65,16 +64,14 @@ const getStore = globalState => {
 };
 
 const App = () => {
-
   const {
     requestUserPermission,
     getFCMToken,
     listenToBackgroundNotifications,
     listenToForegroundNotifications,
     onNotificationOpenedAppFromBackground,
-    onNotificationOpenedAppFromQuit,
+    onNotificationOpenedAppFromQuit
   } = usePushNotification();
-
   useEffect(() => {
     const listenToNotifications = () => {
       try {
@@ -91,7 +88,6 @@ const App = () => {
 
     listenToNotifications();
   }, []);
-
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules.concat(screens));
   const store = getStore(global);
