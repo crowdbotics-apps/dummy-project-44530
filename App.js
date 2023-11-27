@@ -11,7 +11,6 @@ import { connectors } from "@store";
 import { GlobalOptionsContext, OptionsContext, getOptions, getGlobalOptions } from "@options";
 import usePushNotification from "./services/usePushNotification";
 import SplashScreen from "react-native-splash-screen";
-import splash from "./modules/splash";
 const Stack = createStackNavigator();
 
 const getNavigation = modules => {
@@ -35,8 +34,7 @@ const getNavigation = modules => {
     const {
       screenOptions
     } = globalOptions;
-
-    console.log(routes , "Routes")
+    console.log(routes, "Routes");
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
@@ -91,10 +89,9 @@ const App = () => {
     };
 
     listenToNotifications();
-
     setTimeout(() => {
-      SplashScreen.hide()
-    }, 100)
+      SplashScreen.hide();
+    }, 100);
   }, []);
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules.concat(screens));
