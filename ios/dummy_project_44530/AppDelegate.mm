@@ -3,6 +3,7 @@
 #import <React/RCTBundleURLProvider.h>
 #import <UserNotifications/UserNotifications.h>
 #import <RNCPushNotificationIOS.h>
+#import "RNSplashScreen.h"
 
 @implementation AppDelegate
 
@@ -17,6 +18,10 @@
   center.delegate = self;
   
   [FIRApp configure];
+  
+  bool didFinish=[super application:application didFinishLaunchingWithOptions:launchOptions];
+
+   [RNSplashScreen show];  // add this
   
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
