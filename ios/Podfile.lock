@@ -10,6 +10,33 @@ PODS:
     - React-Core (= 0.71.7)
     - React-jsi (= 0.71.7)
     - ReactCommon/turbomodule/core (= 0.71.7)
+  - Firebase/CoreOnly (10.18.0):
+    - FirebaseCore (= 10.18.0)
+  - Firebase/Messaging (10.18.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 10.18.0)
+  - FirebaseCore (10.18.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreExtension (10.18.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.18.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.18.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.18.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
   - Flipper (0.125.0):
     - Flipper-Folly (~> 2.6)
     - Flipper-RSocket (~> 1.4)
@@ -73,24 +100,58 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleDataTransport (9.2.5):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities (7.12.0):
+    - GoogleUtilities/AppDelegateSwizzler (= 7.12.0)
+    - GoogleUtilities/Environment (= 7.12.0)
+    - GoogleUtilities/ISASwizzler (= 7.12.0)
+    - GoogleUtilities/Logger (= 7.12.0)
+    - GoogleUtilities/MethodSwizzler (= 7.12.0)
+    - GoogleUtilities/Network (= 7.12.0)
+    - "GoogleUtilities/NSData+zlib (= 7.12.0)"
+    - GoogleUtilities/Reachability (= 7.12.0)
+    - GoogleUtilities/SwizzlerTestHelpers (= 7.12.0)
+    - GoogleUtilities/UserDefaults (= 7.12.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.12.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.12.0):
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/ISASwizzler (7.12.0)
+  - GoogleUtilities/Logger (7.12.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.12.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.12.0)"
+  - GoogleUtilities/Reachability (7.12.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/SwizzlerTestHelpers (7.12.0):
+    - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/UserDefaults (7.12.0):
+    - GoogleUtilities/Logger
   - hermes-engine (0.71.7):
     - hermes-engine/Pre-built (= 0.71.7)
   - hermes-engine/Pre-built (0.71.7)
   - libevent (2.1.12)
-  - MapboxCommon (23.8.4)
-  - MapboxCoreMaps (10.16.2):
-    - MapboxCommon (~> 23.8)
-  - MapboxMaps (10.16.2):
-    - MapboxCommon (= 23.8.4)
-    - MapboxCoreMaps (= 10.16.2)
-    - MapboxMobileEvents (= 1.0.10)
-    - Turf (~> 2.0)
-  - MapboxMobileEvents (1.0.10)
+  - nanopb (2.30909.1):
+    - nanopb/decode (= 2.30909.1)
+    - nanopb/encode (= 2.30909.1)
+  - nanopb/decode (2.30909.1)
+  - nanopb/encode (2.30909.1)
   - OpenSSL-Universal (1.1.1100)
   - Permission-Camera (3.0.4):
     - RNPermissions
   - Permission-PhotoLibrary (3.0.4):
     - RNPermissions
+  - PromisesObjC (2.3.1)
   - RCT-Folly (2021.07.22.00):
     - boost
     - DoubleConversion
@@ -434,6 +495,16 @@ PODS:
     - React-perflogger (= 0.71.7)
   - RNCMaskedView (0.2.9):
     - React-Core
+  - RNCPushNotificationIOS (1.11.0):
+    - React-Core
+  - RNFBApp (18.6.2):
+    - Firebase/CoreOnly (= 10.18.0)
+    - React-Core
+  - RNFBMessaging (18.6.2):
+    - Firebase/Messaging (= 10.18.0)
+    - FirebaseCoreExtension (= 10.18.0)
+    - React-Core
+    - RNFBApp
   - RNGestureHandler (2.10.1):
     - React-Core
   - RNImageCropPicker (0.36.2):
@@ -445,17 +516,6 @@ PODS:
     - React-Core
     - React-RCTImage
     - TOCropViewController
-  - rnmapbox-maps (10.1.0-beta.21):
-    - MapboxMaps (~> 10.16.2)
-    - React
-    - React-Core
-    - rnmapbox-maps/DynamicLibrary (= 10.1.0-beta.21)
-    - Turf
-  - rnmapbox-maps/DynamicLibrary (10.1.0-beta.21):
-    - MapboxMaps (~> 10.16.2)
-    - React
-    - React-Core
-    - Turf
   - RNPermissions (3.0.4):
     - React-Core
   - RNReanimated (2.14.4):
@@ -492,7 +552,6 @@ PODS:
     - React-Core
   - SocketRocket (0.6.0)
   - TOCropViewController (2.6.1)
-  - Turf (2.7.0)
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
     - Yoga (~> 1.14)
@@ -502,6 +561,8 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
+  - FirebaseCore
+  - FirebaseCoreInternal
   - Flipper (= 0.125.0)
   - Flipper-Boost-iOSX (= 1.76.0.1.11)
   - Flipper-DoubleConversion (= 3.2.0.1)
@@ -524,6 +585,7 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.125.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.125.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleUtilities
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
@@ -560,9 +622,11 @@ DEPENDENCIES:
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-masked-view/masked-view`)"
+  - "RNCPushNotificationIOS (from `../node_modules/@react-native-community/push-notification-ios`)"
+  - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - "RNFBMessaging (from `../node_modules/@react-native-firebase/messaging`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNImageCropPicker (from `../node_modules/react-native-image-crop-picker`)
-  - "rnmapbox-maps (from `../node_modules/@rnmapbox/maps`)"
   - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -572,6 +636,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseInstallations
+    - FirebaseMessaging
     - Flipper
     - Flipper-Boost-iOSX
     - Flipper-DoubleConversion
@@ -582,15 +652,14 @@ SPEC REPOS:
     - Flipper-RSocket
     - FlipperKit
     - fmt
+    - GoogleDataTransport
+    - GoogleUtilities
     - libevent
-    - MapboxCommon
-    - MapboxCoreMaps
-    - MapboxMaps
-    - MapboxMobileEvents
+    - nanopb
     - OpenSSL-Universal
+    - PromisesObjC
     - SocketRocket
     - TOCropViewController
-    - Turf
     - YogaKit
 
 EXTERNAL SOURCES:
@@ -668,12 +737,16 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCMaskedView:
     :path: "../node_modules/@react-native-masked-view/masked-view"
+  RNCPushNotificationIOS:
+    :path: "../node_modules/@react-native-community/push-notification-ios"
+  RNFBApp:
+    :path: "../node_modules/@react-native-firebase/app"
+  RNFBMessaging:
+    :path: "../node_modules/@react-native-firebase/messaging"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNImageCropPicker:
     :path: "../node_modules/react-native-image-crop-picker"
-  rnmapbox-maps:
-    :path: "../node_modules/@rnmapbox/maps"
   RNPermissions:
     :path: "../node_modules/react-native-permissions"
   RNReanimated:
@@ -691,6 +764,12 @@ SPEC CHECKSUMS:
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
   FBLazyVector: a89a0525bc7ca174675045c2b492b5280d5a2470
   FBReactNativeSpec: 7714e6bc1e9ea23df6c4cb42f0b2fd9c6a3a559c
+  Firebase: 414ad272f8d02dfbf12662a9d43f4bba9bec2a06
+  FirebaseCore: 2322423314d92f946219c8791674d2f3345b598f
+  FirebaseCoreExtension: 62b201498aa10535801cdf3448c7f4db5e24ed80
+  FirebaseCoreInternal: 8eb002e564b533bdcf1ba011f33f2b5c10e2ed4a
+  FirebaseInstallations: e842042ec6ac1fd2e37d7706363ebe7f662afea4
+  FirebaseMessaging: 9bc34a98d2e0237e1b121915120d4d48ddcf301e
   Flipper: 26fc4b7382499f1281eb8cb921e5c3ad6de91fe0
   Flipper-Boost-iOSX: fd1e2b8cbef7e662a122412d7ac5f5bea715403c
   Flipper-DoubleConversion: 2dc99b02f658daf147069aad9dbd29d8feb06d30
@@ -702,15 +781,15 @@ SPEC CHECKSUMS:
   FlipperKit: cbdee19bdd4e7f05472a66ce290f1b729ba3cb86
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
+  GoogleDataTransport: 54dee9d48d14580407f8f5fbf2f496e92437a2f2
+  GoogleUtilities: 0759d1a57ebb953965c2dfe0ba4c82e95ccc2e34
   hermes-engine: 4438d2b8bf8bebaba1b1ac0451160bab59e491f8
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  MapboxCommon: 23deb9c2abe05897a3ade46aac391c9d2ada396e
-  MapboxCoreMaps: b6921145ffe26eff2ec0fa84edb99496a189ea53
-  MapboxMaps: f7a24f57ee25ea6eb9d195c9b0273bb8776fcbc1
-  MapboxMobileEvents: de50b3a4de180dd129c326e09cd12c8adaaa46d6
+  nanopb: d4d75c12cd1316f4a64e3c6963f879ecd4b5e0d5
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   Permission-Camera: 74dc395c37a06ebe915069c5dca954c7a2a5a2e3
   Permission-PhotoLibrary: 440f206f0d36e5951c4c9b28567f60471fdddfb5
+  PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
   RCT-Folly: 424b8c9a7a0b9ab2886ffe9c3b041ef628fd4fb1
   RCTRequired: 5a4a30ac20c86eeadd6844a9328f78d4168cf9b2
   RCTTypeSafety: 279fc5861a89f0f37db3a585f27f971485b4b734
@@ -740,19 +819,20 @@ SPEC CHECKSUMS:
   React-runtimeexecutor: c5c89f8f543842dd864b63ded1b0bbb9c9445328
   ReactCommon: dbfbe2f7f3c5ce4ce44f43f2fd0d5950d1eb67c5
   RNCMaskedView: 949696f25ec596bfc697fc88e6f95cf0c79669b6
+  RNCPushNotificationIOS: 64218f3c776c03d7408284a819b2abfda1834bc8
+  RNFBApp: 5a4df14a5094dab69fc29049be3cf54af07b0435
+  RNFBMessaging: ad43f856329b726580e8f3898335a2382e5294e1
   RNGestureHandler: 42ec7c28dd02d540ed6c9159c57a98ff016492dc
   RNImageCropPicker: 35a3ceb837446fa11547704709bb22b5fac6d584
-  rnmapbox-maps: f5a71437d0f3f13ea08f96806952dc1d63a951ec
   RNPermissions: c46788f4cd402287425983e04a4c9bb4356036eb
   RNReanimated: cc5e3aa479cb9170bcccf8204291a6950a3be128
   RNScreens: 218801c16a2782546d30bd2026bb625c0302d70f
   RNVectorIcons: fcc2f6cb32f5735b586e66d14103a74ce6ad61f8
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   TOCropViewController: edfd4f25713d56905ad1e0b9f5be3fbe0f59c863
-  Turf: 13d1a92d969ca0311bbc26e8356cca178ce95da2
   Yoga: d56980c8914db0b51692f55533409e844b66133c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ae0da58cca3cb16f0cc370b907a231d9eb7e760b
+PODFILE CHECKSUM: 1c72364a4a9e9dd59dd7a17fc7ae17ea705ea90c
 
 COCOAPODS: 1.13.0

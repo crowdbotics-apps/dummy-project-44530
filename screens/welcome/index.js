@@ -22,7 +22,7 @@ const WelcomeScreen = () => {
         </Pressable>
 
         <Pressable onPress={() => {
-        navigation.navigate('Mapbox Maps');
+        navigation.navigate('login');
       }}>
           <Text style={styles.text}>Signup</Text>
         </Pressable>

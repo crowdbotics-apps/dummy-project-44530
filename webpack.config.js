@@ -74,7 +74,6 @@ const babelLoaderConfiguration = {
     path.resolve(appDirectory, 'node_modules/react-native-keyboard-aware-scroll-view'),
     path.resolve(appDirectory, 'node_modules/react-native-switch-toggle'),
     path.resolve(appDirectory, 'node_modules/react-native-actionsheet'),
-    path.resolve(appDirectory, 'node_modules/@rnmapbox/maps')
   ],
   use: {
     loader: "babel-loader",

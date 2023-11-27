@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Provider } from "react-redux";
 import "react-native-gesture-handler";
 import { NavigationContainer } from "@react-navigation/native";
@@ -9,7 +9,7 @@ import { screens } from "@screens";
 import { modules, reducers, hooks } from "@modules";
 import { connectors } from "@store";
 import { GlobalOptionsContext, OptionsContext, getOptions, getGlobalOptions } from "@options";
-import mapboxMaps from "./modules/mapbox-maps";
+import usePushNotification from "./services/usePushNotification";
 const Stack = createStackNavigator();
 
 const getNavigation = modules => {
@@ -65,6 +65,33 @@ const getStore = globalState => {
 };
 
 const App = () => {
+
+  const {
+    requestUserPermission,
+    getFCMToken,
+    listenToBackgroundNotifications,
+    listenToForegroundNotifications,
+    onNotificationOpenedAppFromBackground,
+    onNotificationOpenedAppFromQuit,
+  } = usePushNotification();
+
+  useEffect(() => {
+    const listenToNotifications = () => {
+      try {
+        getFCMToken();
+        requestUserPermission();
+        onNotificationOpenedAppFromQuit();
+        listenToBackgroundNotifications();
+        listenToForegroundNotifications();
+        onNotificationOpenedAppFromBackground();
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    listenToNotifications();
+  }, []);
+
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules.concat(screens));
   const store = getStore(global);
