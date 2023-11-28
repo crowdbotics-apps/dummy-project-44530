@@ -8,6 +8,24 @@ function api_docs_schema_retrieve(payload) {
     params: { lang: payload.lang }
   })
 }
+function api_v1_expense_list(payload) {
+  return dummyprojectAPI.get(`/api/v1/expense/`)
+}
+function api_v1_expense_create(payload) {
+  return dummyprojectAPI.post(`/api/v1/expense/`, payload)
+}
+function api_v1_expense_retrieve(payload) {
+  return dummyprojectAPI.get(`/api/v1/expense/${payload.id}/`)
+}
+function api_v1_expense_update(payload) {
+  return dummyprojectAPI.put(`/api/v1/expense/${payload.id}/`, payload)
+}
+function api_v1_expense_partial_update(payload) {
+  return dummyprojectAPI.patch(`/api/v1/expense/${payload.id}/`, payload)
+}
+function api_v1_expense_destroy(payload) {
+  return dummyprojectAPI.delete(`/api/v1/expense/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return dummyprojectAPI.post(`/api/v1/login/`, payload)
 }
@@ -49,6 +67,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_expense_list,
+  api_v1_expense_create,
+  api_v1_expense_retrieve,
+  api_v1_expense_update,
+  api_v1_expense_partial_update,
+  api_v1_expense_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
