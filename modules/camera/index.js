@@ -58,7 +58,7 @@ const Camera = () => {
     item
   }) => <TouchableOpacity>
       <ImageBackground source={{
-      uri: `${gOptions.url}/${item.image}`
+      uri: `${item.sourceURL}`
     }} style={styles.image}></ImageBackground>
     </TouchableOpacity>;
 
@@ -78,7 +78,10 @@ const Camera = () => {
       }
 
       if (res) {
-        uploadUserImage();
+
+        setData([...data , res])
+        // uploadUserImage();
+        console.log(res)
       }
     }} />
       <TouchableOpacity onPress={() => actionSheet.current.show()} style={styles.photoBtn}>

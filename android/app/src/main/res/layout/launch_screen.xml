@@ -4,4 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Wordle App"
+        android:textAlignment="center"
+        android:gravity='center'
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
 </LinearLayout>

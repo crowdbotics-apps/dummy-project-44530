@@ -34,7 +34,6 @@ const getNavigation = modules => {
     const {
       screenOptions
     } = globalOptions;
-    console.log(routes, "Routes");
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
@@ -89,9 +88,11 @@ const App = () => {
     };
 
     listenToNotifications();
+
     setTimeout(() => {
-      SplashScreen.hide();
-    }, 100);
+      SplashScreen.hide()
+    }, 100)
+
   }, []);
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules.concat(screens));

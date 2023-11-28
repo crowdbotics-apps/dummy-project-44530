@@ -69,7 +69,7 @@ export const pickFromGallery = async () => {
         height: 300,
         cropping: true,
         mediaType: "photo",
-        includeBase64: true
+        // includeBase64: true
       });
       return res;
     } catch (err) {
