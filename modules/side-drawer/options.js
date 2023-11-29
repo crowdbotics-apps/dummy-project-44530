@@ -1,4 +1,6 @@
+
 const screenSet = [];
+
 const drawerOptions = {
   initialRouteName: "",
   drawerType: "",
@@ -11,6 +13,7 @@ const drawerOptions = {
   keyboardDismissMode: "",
   minSwipeDistance: 0
 };
+
 export default {
   screenSet: screenSet,
   drawerOptions: drawerOptions
