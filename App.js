@@ -88,11 +88,9 @@ const App = () => {
     };
 
     listenToNotifications();
-
     setTimeout(() => {
-      SplashScreen.hide()
-    }, 100)
-
+      SplashScreen.hide();
+    }, 100);
   }, []);
   const global = useContext(GlobalOptionsContext);
   const Navigation = getNavigation(modules.concat(screens));

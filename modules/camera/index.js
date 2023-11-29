@@ -78,10 +78,9 @@ const Camera = () => {
       }
 
       if (res) {
+        setData([...data, res]); // uploadUserImage();
 
-        setData([...data , res])
-        // uploadUserImage();
-        console.log(res)
+        console.log(res);
       }
     }} />
       <TouchableOpacity onPress={() => actionSheet.current.show()} style={styles.photoBtn}>
