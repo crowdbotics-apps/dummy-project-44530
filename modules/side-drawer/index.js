@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { OptionsContext } from "@options";
 import PropTypes from "prop-types";
+import login from "../login";
+import LoginScreen from "../../screens/LoginScreen";
 
 const Drawer = createDrawerNavigator();
 
@@ -35,7 +37,8 @@ const SideDrawer = ({
       keyboardDismissMode={keyboardDismissMode || drawerOptions.keyboardDismissMode}
       minSwipeDistance={minSwipeDistance || drawerOptions.minSwipeDistance}
     >
-      {options.screenSet
+
+        {options.screenSet
         ? options.screenSet.map((screen, index) => (
           <Drawer.Screen
             key={index}

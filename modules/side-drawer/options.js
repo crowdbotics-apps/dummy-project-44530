@@ -1,5 +1,18 @@
+import LoginScreen from "../../screens/LoginScreen";
+import login from "../login";
 
-const screenSet = [];
+const screenSet = [
+  {
+    name: 'login',
+    component: login?.navigator,
+    options: {}
+  },
+  {
+    name: 'LoginScreen',
+    component: LoginScreen,
+    options: {}
+  }
+];
 
 const drawerOptions = {
   initialRouteName: "",

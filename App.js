@@ -34,6 +34,8 @@ const getNavigation = modules => {
     const {
       screenOptions
     } = globalOptions;
+
+    console.log(routes)
     return <NavigationContainer>
         <Stack.Navigator initialRouteName={initialRoute} screenOptions={screenOptions}>
           {routes}
