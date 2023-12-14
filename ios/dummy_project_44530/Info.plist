@@ -24,6 +24,26 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>895445078686231</string>
+      </array>
+      </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>895445078686231</string>
+    <key>FacebookClientToken</key>
+    <string>377f6853283d6a1a5226ccec479c11f6</string>
+    <key>FacebookDisplayName</key>
+    <string>dummy-project-44530</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+      <string>fbapi</string>
+      <string>fb-messenger-share-api</string>
+    </array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

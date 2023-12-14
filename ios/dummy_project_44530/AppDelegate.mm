@@ -4,6 +4,8 @@
 #import <UserNotifications/UserNotifications.h>
 #import <RNCPushNotificationIOS.h>
 #import "RNSplashScreen.h"
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 
 @implementation AppDelegate
 
@@ -23,7 +25,24 @@
 
    [RNSplashScreen show];  // add this
   
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+  [[FBSDKApplicationDelegate sharedInstance] application:application
+      didFinishLaunchingWithOptions:launchOptions];
+  
+  return true;
+//  [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+
+  BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
+    openURL:url
+    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+    annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+  ];
+  // Add any custom logic here.
+  return handled;
 }
 
 //Called when a notification is delivered to a foreground app.

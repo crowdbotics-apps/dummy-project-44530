@@ -1,5 +1,5 @@
 import LoginScreen from "../../screens/LoginScreen";
-import login from "../login";
+import login from "../loginName";
 const screenSet = [{
   name: 'login',
   component: login?.navigator,

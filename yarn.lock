@@ -2076,7 +2076,7 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@invertase/react-native-apple-authentication@^2.1.0":
+"@invertase/react-native-apple-authentication@^2.1.0", "@invertase/react-native-apple-authentication@^2.3.0":
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/@invertase/react-native-apple-authentication/-/react-native-apple-authentication-2.3.0.tgz#b131b2033bfce06ca788f0b0886b51eb6effea0e"
   integrity sha512-D3NNPv98EmkkCJyQEZhRn1zPC5EH+8LKBS+ddFsDyc3rVGWE7Ct0ffpxZ5T60w6wamIPjojIMSfEPUxbQ28+og==
@@ -2376,7 +2376,7 @@
 "@modules/side-drawer@file:./modules/side-drawer":
   version "1.0.0"
 
-"@modules/social-login@file:./modules/social-login/":
+"@modules/social-login@file:./modules/social-login":
   version "1.0.0"
   dependencies:
     "@invertase/react-native-apple-authentication" "^2.1.0"
@@ -8693,6 +8693,11 @@ react-native-fbsdk-next@11.2.1:
   dependencies:
     xml2js "^0.4.23"
 
+react-native-fbsdk@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-3.0.0.tgz#07ef41758bb17a0acaff744008af625a45ef9a01"
+  integrity sha512-i0JocuzLlGk13J0xFDjm8GlX7SADAL2kh/syE/HOn5HHdW+PFjC31MNj5AtzIw2TicHXpHGO6VPKNfdWFbxboA==
+
 react-native-gesture-handler@^2.10.0:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.10.1.tgz#ca5f0f09bfa8d0560f492fc599fa64a64dcdd231"
@@ -8710,6 +8715,11 @@ react-native-get-random-values@^1.6.0:
   integrity sha512-gZ1zbXhbb8+Jy9qYTV8c4Nf45/VB4g1jmXuavY5rPfUn7x3ok9Vl3FTl0dnE92Z4FFtfbUNNwtSfcmomdtWg+A==
   dependencies:
     fast-base64-decode "^1.0.0"
+
+react-native-google-signin@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-google-signin/-/react-native-google-signin-2.1.1.tgz#4281940eee88602b0181dd49affdf8c92980c85c"
+  integrity sha512-6l3fiLdX/bfhh0BoxGq+jGkagFsO+mrE/eRV4+3/0k8+FDxO90vdPpQdDiwlM5vWXRxWthTzMM09/jHw+4cvNw==
 
 react-native-gradle-plugin@^0.71.17:
   version "0.71.17"
