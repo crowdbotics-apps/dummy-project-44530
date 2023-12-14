@@ -1,19 +1,14 @@
 import LoginScreen from "../../screens/LoginScreen";
 import login from "../login";
-
-const screenSet = [
-  {
-    name: 'login',
-    component: login?.navigator,
-    options: {}
-  },
-  {
-    name: 'LoginScreen',
-    component: LoginScreen,
-    options: {}
-  }
-];
-
+const screenSet = [{
+  name: 'login',
+  component: login?.navigator,
+  options: {}
+}, {
+  name: 'LoginScreen',
+  component: LoginScreen,
+  options: {}
+}];
 const drawerOptions = {
   initialRouteName: "",
   drawerType: "",
@@ -26,7 +21,6 @@ const drawerOptions = {
   keyboardDismissMode: "",
   minSwipeDistance: 0
 };
-
 export default {
   screenSet: screenSet,
   drawerOptions: drawerOptions
